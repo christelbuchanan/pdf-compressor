@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  color-scheme: light;
+  color: #333;
+  background-color: #f5f0e8;
+  background-image: url('https://www.transparenttextures.com/patterns/paper.png');
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@layer components {
+  .skeuomorphic-panel {
+    @apply bg-paper-100 bg-paper-texture rounded-xl p-6 shadow-lg border border-leather-200;
+  }
+  
+  .skeuomorphic-button {
+    @apply py-3 px-6 bg-gradient-to-b from-leather-400 to-leather-500 text-white font-semibold rounded-lg shadow-md hover:from-leather-500 hover:to-leather-600 active:shadow-inner-light transition-all duration-200 text-center;
+  }
+  
+  .skeuomorphic-radio {
+    @apply appearance-none w-5 h-5 rounded-full border-2 border-leather-400 bg-paper-50 checked:border-leather-600 checked:bg-leather-500 checked:ring-2 checked:ring-offset-2 checked:ring-leather-400 transition-all duration-200;
+  }
+}
